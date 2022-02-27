@@ -2,9 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>To Do List</title>
-    <link rel="stylesheet" href="estilos.css" />
+    <title>Task!</title>
+    <link rel="stylesheet" href="Css/Estilos.css" />
     <link
       rel="stylesheet"
       href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
@@ -13,22 +14,23 @@
     />
   </head>
   <body>
-    <header>
-      <span class="logo">To Do List</span>
-      <form class="form_filter">
-        <input type="text" class="filter" placeholder="Filtrar Datos" />
+    <div class="conteiner">
+      <h2 class="title">Register Task!</h2>
+      <form class="form_task border flex" id="formTask">
+        <label for="title_task"></label>
+        <input
+          type="text"
+          class="input_text"
+          id="title_task"
+          placeholder="Name Task"
+          required="true"
+          autocomplete="off"
+        />
+        <button class="register_task btn close_form_register">Add Task!</button>
       </form>
-    </header>
-    <div class="cont_task">
-      <h1>task application</h1>
-      <form class="form" id="form">
-        <input class="caja" type="text" id="caja" placeholder="Task Name" />
-        <button id="btn">Add</button>
-      </form>
-
-      <div class="contenedor" id="contenedor"></div>
-      <span class="total_task" id="total_task"></span>
+      <div id="conte_list__task" class="conte_list__task"></div>
     </div>
-    <script src="app.js"></script>
+    <script src="Js/app.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   </body>
 </html>
